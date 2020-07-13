@@ -9,7 +9,7 @@ namespace TreebankBracketed.AST
     {
         protected string m_name = "un_defined";
         protected List<AST> m_children = new List<AST>();
-        protected List<Operator> m_ops = new List<Operator>();
+        //protected List<Operator> m_ops = new List<Operator>();
         protected AST m_parent = null;
         protected int m_id;
 
@@ -30,7 +30,7 @@ namespace TreebankBracketed.AST
 
             stream.WriteLine("digraph G {");
             stream.WriteLine("Title [label=\"" + title + "\",shape=box]");
-            Dump(stream);
+            //Dump(stream);
             stream.Write("}");
 
             if (stream != null)
@@ -40,7 +40,7 @@ namespace TreebankBracketed.AST
 
             return true;
         }
-
+/*
         public virtual void Dump(StreamWriter sw)
         {
             sw.Write(UniqueName + "[label = \"" + Name);
@@ -58,5 +58,5 @@ namespace TreebankBracketed.AST
                 child.Dump(sw);
             }
         }
-    }
+*/    }
 }
