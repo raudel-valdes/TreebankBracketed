@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)\coco.exe&quot; -frames  &quot;$(ProjectDir)\&quot;  -o &quot;$(ProjectDir)\&quot; &quot;$(ProjectDir)\BracketedNotation.atg&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="Coco.exe" />
+    <None Remove="Parser.cs.old" />
+    <None Remove="Parser.frame" />
+    <None Remove="Scanner.cs.old" />
+    <None Remove="Scanner.frame" />
+  </ItemGroup>
+
+</Project>
